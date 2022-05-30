@@ -19,10 +19,10 @@
 -- Table structure for table `district`
 --
 
-DROP TABLE IF EXISTS `district`;
+---DROP TABLE IF EXISTS `district`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `district` (
+/*CREATE TABLE `district` (
   `district_id` varchar(36) NOT NULL,
   `voided` bit(1) DEFAULT NULL,
   `date_created` date NOT NULL,
@@ -42,27 +42,28 @@ CREATE TABLE `district` (
   PRIMARY KEY (`district_id`),
   KEY `FK_5x8813je991s9iukbp3q5blkq` (`province_id`),
   CONSTRAINT `FK_5x8813je991s9iukbp3q5blkq` FOREIGN KEY (`province_id`) REFERENCES `province` (`province_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;*/
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `district`
 --
 
-LOCK TABLES `district` WRITE;
+/*LOCK TABLES `district` WRITE;*/
 /*!40000 ALTER TABLE `district` DISABLE KEYS */;
-INSERT INTO `district` VALUES ('403f1bd6-1c21-448a-a764-961a2ebdaddd',_binary '','2018-12-11',NULL,NULL,NULL,NULL,'Mutasa','Mutasa',NULL,'592b7b47-ef78-4781-b915-6e717a6385c8','1001','admin@softhub.com',NULL,NULL,'b56ca02e-a399-4b7f-983b-bd792122dec1'),('cbe87ccc-d8fa-4574-8200-abee7dc14876',_binary '','2018-12-11',NULL,NULL,NULL,NULL,'Buhera','Buhera',NULL,'35ff1f85-4600-4308-9d6d-0f995f7829ef','1002','admin@softhub.com',NULL,NULL,'b56ca02e-a399-4b7f-983b-bd792122dec1');
+/*INSERT INTO `district` VALUES ('403f1bd6-1c21-448a-a764-961a2ebdaddd',_binary '','2018-12-11',NULL,NULL,NULL,NULL,'Mutasa','Mutasa',NULL,'592b7b47-ef78-4781-b915-6e717a6385c8','1001','admin@softhub.com',NULL,NULL,'b56ca02e-a399-4b7f-983b-bd792122dec1'),('cbe87ccc-d8fa-4574-8200-abee7dc14876',_binary '','2018-12-11',NULL,NULL,NULL,NULL,'Buhera','Buhera',NULL,'35ff1f85-4600-4308-9d6d-0f995f7829ef','1002','admin@softhub.com',NULL,NULL,'b56ca02e-a399-4b7f-983b-bd792122dec1');
+*/
 /*!40000 ALTER TABLE `district` ENABLE KEYS */;
-UNLOCK TABLES;
+/*UNLOCK TABLES;*/
 
 --
 -- Table structure for table `priority`
 --
 
-DROP TABLE IF EXISTS `priority`;
+--DROP TABLE IF EXISTS `priority`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `priority` (
+/*CREATE TABLE `priority` (
   `priority_id` varchar(36) NOT NULL,
   `voided` bit(1) DEFAULT NULL,
   `date_created` date NOT NULL,
@@ -78,26 +79,26 @@ CREATE TABLE `priority` (
   `modified_by` varchar(36) DEFAULT NULL,
   `voided_by` varchar(36) DEFAULT NULL,
   PRIMARY KEY (`priority_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;*/
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `priority`
 --
 
-LOCK TABLES `priority` WRITE;
+/*LOCK TABLES `priority` WRITE;*/
 /*!40000 ALTER TABLE `priority` DISABLE KEYS */;
 /*!40000 ALTER TABLE `priority` ENABLE KEYS */;
-UNLOCK TABLES;
+-- UNLOCK TABLES;
 
 --
 -- Table structure for table `privilege`
 --
 
-DROP TABLE IF EXISTS `privilege`;
+/*DROP TABLE IF EXISTS `privilege`;*/
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `privilege` (
+/*CREATE TABLE `privilege` (
   `name` varchar(50) NOT NULL,
   `description` varchar(250) DEFAULT NULL,
   `privilege_id` char(36) NOT NULL DEFAULT '',
@@ -125,26 +126,26 @@ CREATE TABLE `privilege` (
   CONSTRAINT `FK_3889eqolaagllikms5uy2kg1l` FOREIGN KEY (`voided_by`) REFERENCES `user` (`username`),
   CONSTRAINT `FK_ajhuk2pg04j4qsejvn5sweaw7` FOREIGN KEY (`created_by`) REFERENCES `user` (`username`),
   CONSTRAINT `FK_ggtskjnhqownshsfy9ju8jl3w` FOREIGN KEY (`modified_by`) REFERENCES `user` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;*/
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `privilege`
 --
 
-LOCK TABLES `privilege` WRITE;
+/*LOCK TABLES `privilege` WRITE;*/
 /*!40000 ALTER TABLE `privilege` DISABLE KEYS */;
 /*!40000 ALTER TABLE `privilege` ENABLE KEYS */;
-UNLOCK TABLES;
+/*UNLOCK TABLES;*/
 
 --
 -- Table structure for table `province`
 --
-
-DROP TABLE IF EXISTS `province`;
+/*
+DROP TABLE IF EXISTS `province`;*/
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `province` (
+/*CREATE TABLE `province` (
   `province_id` varchar(36) NOT NULL,
   `voided` bit(1) DEFAULT NULL,
   `date_created` date NOT NULL,
@@ -160,27 +161,27 @@ CREATE TABLE `province` (
   `modified_by` varchar(36) DEFAULT NULL,
   `voided_by` varchar(36) DEFAULT NULL,
   PRIMARY KEY (`province_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;*/
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `province`
 --
 
-LOCK TABLES `province` WRITE;
+/*LOCK TABLES `province` WRITE;*/
 /*!40000 ALTER TABLE `province` DISABLE KEYS */;
-INSERT INTO `province` VALUES ('23d2e87b-f60b-4999-84b9-06ef5ab6ee6b',_binary '','2018-12-11',NULL,NULL,NULL,NULL,'Harare','Harare',NULL,'94a0c8cb-5b08-4ab5-9829-fe579de3eb1c',NULL,'admin@softhub.com',NULL),('b56ca02e-a399-4b7f-983b-bd792122dec1',_binary '','2018-12-11',NULL,NULL,NULL,NULL,'Manicaland','Manicaland',NULL,'a72eff36-fc74-4d19-8175-88f7f89e4358',NULL,'admin@softhub.com',NULL);
-/*!40000 ALTER TABLE `province` ENABLE KEYS */;
-UNLOCK TABLES;
+/*INSERT INTO `province` VALUES ('23d2e87b-f60b-4999-84b9-06ef5ab6ee6b',_binary '','2018-12-11',NULL,NULL,NULL,NULL,'Harare','Harare',NULL,'94a0c8cb-5b08-4ab5-9829-fe579de3eb1c',NULL,'admin@softhub.com',NULL),('b56ca02e-a399-4b7f-983b-bd792122dec1',_binary '','2018-12-11',NULL,NULL,NULL,NULL,'Manicaland','Manicaland',NULL,'a72eff36-fc74-4d19-8175-88f7f89e4358',NULL,'admin@softhub.com',NULL);
+*//*!40000 ALTER TABLE `province` ENABLE KEYS */;
+/*UNLOCK TABLES;*/
 
 --
 -- Table structure for table `role`
 --
 
-DROP TABLE IF EXISTS `role`;
+/*DROP TABLE IF EXISTS `role`;*/
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `role` (
+/*CREATE TABLE `role` (
   `description` varchar(250) DEFAULT NULL,
   `role_id` char(36) NOT NULL,
   `created_by` varchar(50) DEFAULT NULL,
@@ -207,27 +208,27 @@ CREATE TABLE `role` (
   CONSTRAINT `FK_an2y0kmx8d0foer8i5vj2rfy5` FOREIGN KEY (`modified_by`) REFERENCES `user` (`username`),
   CONSTRAINT `FK_lrvd68ij3575vbcre9bfudvy0` FOREIGN KEY (`created_by`) REFERENCES `user` (`username`),
   CONSTRAINT `FK_p3melh3h00l88p3twd88vxhv4` FOREIGN KEY (`voided_by`) REFERENCES `user` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;*/
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `role`
 --
 
-LOCK TABLES `role` WRITE;
+/*LOCK TABLES `role` WRITE;*/
 /*!40000 ALTER TABLE `role` DISABLE KEYS */;
-INSERT INTO `role` VALUES (NULL,'44d0da4a-d026-11e1-aea7-24b6fd073a6c',NULL,NULL,0,NULL,NULL,NULL,NULL,NULL,'ROLE_USER',NULL,_binary '',NULL,0,NULL,NULL),(NULL,'ff808181385b65b701385b65d1570001',NULL,'2012-07-06 10:26:35',0,NULL,NULL,NULL,NULL,NULL,'DATA ENTRY CLERK',NULL,_binary '',NULL,0,NULL,NULL),(NULL,'ff808181385b67cf01385b67e47f0001',NULL,'2012-07-06 10:28:51',0,NULL,NULL,NULL,NULL,NULL,'ROLE_ADMINISTRATOR',NULL,_binary '',NULL,0,NULL,NULL);
-/*!40000 ALTER TABLE `role` ENABLE KEYS */;
+/*INSERT INTO `role` VALUES (NULL,'44d0da4a-d026-11e1-aea7-24b6fd073a6c',NULL,NULL,0,NULL,NULL,NULL,NULL,NULL,'ROLE_USER',NULL,_binary '',NULL,0,NULL,NULL),(NULL,'ff808181385b65b701385b65d1570001',NULL,'2012-07-06 10:26:35',0,NULL,NULL,NULL,NULL,NULL,'DATA ENTRY CLERK',NULL,_binary '',NULL,0,NULL,NULL),(NULL,'ff808181385b67cf01385b67e47f0001',NULL,'2012-07-06 10:28:51',0,NULL,NULL,NULL,NULL,NULL,'ROLE_ADMINISTRATOR',NULL,_binary '',NULL,0,NULL,NULL);
+*//*!40000 ALTER TABLE `role` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
 -- Table structure for table `role_privilege`
 --
 
-DROP TABLE IF EXISTS `role_privilege`;
+/*DROP TABLE IF EXISTS `role_privilege`;*/
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `role_privilege` (
+/*CREATE TABLE `role_privilege` (
   `role_id` char(36) NOT NULL,
   `privilege_id` char(36) NOT NULL,
   PRIMARY KEY (`role_id`,`privilege_id`) USING BTREE,
@@ -237,26 +238,26 @@ CREATE TABLE `role_privilege` (
   KEY `FK45FBD628EEA1298A` (`role_id`),
   CONSTRAINT `FK_9xg496yxp3mpqmnsdskahammb` FOREIGN KEY (`role_id`) REFERENCES `role` (`role_id`),
   CONSTRAINT `FK_ibv7nokkl4msov5sl1wyl99n2` FOREIGN KEY (`privilege_id`) REFERENCES `privilege` (`privilege_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;*/
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `role_privilege`
 --
 
-LOCK TABLES `role_privilege` WRITE;
+/*LOCK TABLES `role_privilege` WRITE;*/
 /*!40000 ALTER TABLE `role_privilege` DISABLE KEYS */;
 /*!40000 ALTER TABLE `role_privilege` ENABLE KEYS */;
-UNLOCK TABLES;
+-- UNLOCK TABLES;
 
 --
 -- Table structure for table `station`
 --
 
-DROP TABLE IF EXISTS `station`;
+/*DROP TABLE IF EXISTS `station`;*/
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `station` (
+/*CREATE TABLE `station` (
   `station_id` varchar(36) NOT NULL,
   `voided` bit(1) DEFAULT NULL,
   `date_created` date NOT NULL,
@@ -282,26 +283,26 @@ CREATE TABLE `station` (
   KEY `FK_l0ycj5lyinu55orobpige5f8p` (`district_id`),
   CONSTRAINT `FK_l0ycj5lyinu55orobpige5f8p` FOREIGN KEY (`district_id`) REFERENCES `district` (`district_id`),
   CONSTRAINT `FK_odfn36sjg97v7h9sx606ou6o6` FOREIGN KEY (`station_category_id`) REFERENCES `station_category` (`station_category_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;*/
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `station`
 --
 
-LOCK TABLES `station` WRITE;
+/*LOCK TABLES `station` WRITE;*/
 /*!40000 ALTER TABLE `station` DISABLE KEYS */;
-/*!40000 ALTER TABLE `station` ENABLE KEYS */;
-UNLOCK TABLES;
+/*!40000 ALTER TABLE `station` ENABLE KEYS ;
+UNLOCK TABLES;*/
 
 --
 -- Table structure for table `station_category`
 --
 
-DROP TABLE IF EXISTS `station_category`;
+/*DROP TABLE IF EXISTS `station_category`;*/
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `station_category` (
+/*CREATE TABLE `station_category` (
   `station_category_id` varchar(36) NOT NULL,
   `voided` bit(1) DEFAULT NULL,
   `date_created` date NOT NULL,
@@ -317,17 +318,17 @@ CREATE TABLE `station_category` (
   `modified_by` varchar(36) DEFAULT NULL,
   `voided_by` varchar(36) DEFAULT NULL,
   PRIMARY KEY (`station_category_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;*/
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `station_category`
 --
 
-LOCK TABLES `station_category` WRITE;
+/*LOCK TABLES `station_category` WRITE;*/
 /*!40000 ALTER TABLE `station_category` DISABLE KEYS */;
-INSERT INTO `station_category` VALUES ('dd3b0f39-377f-4a0b-8841-69977efb1dff',_binary '','2018-12-11',NULL,NULL,NULL,NULL,'Local Authority','Local Authority',NULL,'75ae9ab4-fee3-4ac8-94fc-e7de187144c4',NULL,'admin@softhub.com',NULL),('f2ed41cf-e897-4e07-b946-143e36812c3c',_binary '','2018-12-11',NULL,NULL,NULL,NULL,'Central Hospital','Central Hospital',NULL,'316028cd-6a95-49e1-985e-b8d74d84710c',NULL,'admin@softhub.com',NULL);
-/*!40000 ALTER TABLE `station_category` ENABLE KEYS */;
+/*INSERT INTO `station_category` VALUES ('dd3b0f39-377f-4a0b-8841-69977efb1dff',_binary '','2018-12-11',NULL,NULL,NULL,NULL,'Local Authority','Local Authority',NULL,'75ae9ab4-fee3-4ac8-94fc-e7de187144c4',NULL,'admin@softhub.com',NULL),('f2ed41cf-e897-4e07-b946-143e36812c3c',_binary '','2018-12-11',NULL,NULL,NULL,NULL,'Central Hospital','Central Hospital',NULL,'316028cd-6a95-49e1-985e-b8d74d84710c',NULL,'admin@softhub.com',NULL);
+*//*!40000 ALTER TABLE `station_category` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
